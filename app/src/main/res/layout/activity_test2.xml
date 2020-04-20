@@ -142,8 +142,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:backgroundTint="#4FC3F7"
+        android:background="#294768"
         android:src="@drawable/ic_home"
+        app:backgroundTint="#294768"
         app:layout_anchor="@id/bottonAppbar" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -152,10 +153,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#4fc3f7  "
-        app:backgroundTint="#4fc3f7  "
-        app:fabAlignmentMode="end"
+        app:backgroundTint="#294768"
 
+        app:fabAlignmentMode="end"
         app:fabCradleRoundedCornerRadius="20dp"
         app:menu="@menu/app_bar"
         app:navigationIcon="@drawable/ic_menu" />
