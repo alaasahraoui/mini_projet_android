@@ -121,6 +121,19 @@
                 android:textColor="#FFFFFF"
                 android:textColorHint="#00EB1515"
                 android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/Next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background_signin_fourteen"
+                android:shadowColor="#3C3F41"
+                android:text="Next"
+                android:textColor="@android:color/white" />
         </RadioGroup>
 
     </LinearLayout>
