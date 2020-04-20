@@ -19,15 +19,17 @@ public class login extends AppCompatActivity {
         nextbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openQuizAct();
+                openActivity33();
             }
-        });
+        }
+
+        );
     }
 
 
 
 
-    public void openActivity3(){
+    public void openActivity33(){
 //transition.setDuration(10000);
 //transition.setInterpolator(new DecelerateInterpolator());
 //getWindow().setExitTransition(transition);

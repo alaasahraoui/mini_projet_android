@@ -35,14 +35,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView"
                 android:layout_marginTop="10dp"
-                android:text="6 quizes"
+                android:text="6 Quizes"
                 android:textColor="#52BAFF"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
         </RelativeLayout>
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:columnOrderPreserved="false"
@@ -50,103 +50,6 @@
 
 
             >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-
-                android:layout_margin="12dp"
-                android:clickable="true"
-                android:elevation="6sp"
-                android:fadeScrollbars="true"
-                android:fadingEdge="horizontal"
-                android:filterTouchesWhenObscured="false"
-                android:foregroundTint="#00131212"
-                android:outlineAmbientShadowColor="#000000"
-                android:outlineSpotShadowColor="#000000"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6sp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:hapticFeedbackEnabled="false"
-
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-
-                    <ImageView
-                        android:id="@+id/image22"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        app:srcCompat="@drawable/data" />
-
-                    <TextView
-                        android:id="@+id/textView322"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Maths"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card1ee1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-
-                android:layout_margin="12dp"
-                android:clickable="true"
-                android:elevation="6sp"
-                android:fadeScrollbars="true"
-                android:fadingEdge="horizontal"
-                android:filterTouchesWhenObscured="false"
-                android:foregroundTint="#00131212"
-                android:outlineAmbientShadowColor="#000000"
-                android:outlineSpotShadowColor="#000000"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6sp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:hapticFeedbackEnabled="false"
-
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-
-                    <ImageView
-                        android:id="@+id/imagef22"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-
-                        app:srcCompat="@drawable/chat" />
-
-                    <TextView
-                        android:id="@+id/textView322f"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="لغة عربية"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/carfd11"
@@ -172,9 +75,10 @@
                     android:layout_width="match_parent"
 
                     android:layout_height="match_parent"
+                    android:background="@drawable/card_bg"
+
                     android:gravity="center"
                     android:hapticFeedbackEnabled="false"
-
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -183,7 +87,7 @@
                         android:id="@+id/imagfee22"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        app:srcCompat="@drawable/animals" />
+                        app:srcCompat="@drawable/animals3" />
 
                     <TextView
                         android:id="@+id/textfView322"
@@ -191,104 +95,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="Animals"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/carsd11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-
-                android:layout_margin="12dp"
-                android:clickable="true"
-                android:elevation="6sp"
-                android:fadeScrollbars="true"
-                android:fadingEdge="horizontal"
-                android:filterTouchesWhenObscured="false"
-                android:foregroundTint="#00131212"
-                android:outlineAmbientShadowColor="#000000"
-                android:outlineSpotShadowColor="#000000"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6sp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:hapticFeedbackEnabled="false"
-
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-
-                    <ImageView
-                        android:id="@+id/imadsge22"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-
-                        app:srcCompat="@drawable/bitcoin" />
-
-                    <TextView
-                        android:id="@+id/textVddiew322"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Geography"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-
-                android:layout_margin="12dp"
-                android:clickable="true"
-                android:elevation="6sp"
-                android:fadeScrollbars="true"
-                android:fadingEdge="horizontal"
-                android:filterTouchesWhenObscured="false"
-                android:foregroundTint="#00131212"
-                android:outlineAmbientShadowColor="#000000"
-                android:outlineSpotShadowColor="#000000"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6sp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:hapticFeedbackEnabled="false"
-
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-
-                    <ImageView
-                        android:id="@+id/image2"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        app:srcCompat="@drawable/date" />
-
-                    <TextView
-                        android:id="@+id/textView32"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="History"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/points"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -317,9 +124,10 @@
                     android:layout_width="match_parent"
 
                     android:layout_height="match_parent"
+                    android:background="@drawable/card_bg"
+
                     android:gravity="center"
                     android:hapticFeedbackEnabled="false"
-
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -329,7 +137,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
 
-                        app:srcCompat="@drawable/science" />
+                        app:srcCompat="@drawable/s5" />
 
                     <TextView
                         android:id="@+id/textViewrr322"
@@ -337,7 +145,204 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="Science"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/points"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+
+                android:layout_margin="12dp"
+                android:clickable="true"
+                android:elevation="6sp"
+                android:fadeScrollbars="true"
+                android:fadingEdge="horizontal"
+                android:filterTouchesWhenObscured="false"
+                android:foregroundTint="#00131212"
+                android:outlineAmbientShadowColor="#000000"
+                android:outlineSpotShadowColor="#000000"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/card_bg"
+                    android:gravity="center"
+                    android:hapticFeedbackEnabled="false"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <ImageView
+                        android:id="@+id/image22"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:srcCompat="@drawable/data" />
+
+                    <TextView
+                        android:id="@+id/textView322"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Maths"
+                        android:textColor="@color/points"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1ee1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+
+                android:layout_margin="12dp"
+                android:clickable="true"
+                android:elevation="6sp"
+                android:fadeScrollbars="true"
+                android:fadingEdge="horizontal"
+                android:filterTouchesWhenObscured="false"
+                android:foregroundTint="#00131212"
+                android:outlineAmbientShadowColor="#000000"
+                android:outlineSpotShadowColor="#000000"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_bg"
+
+                    android:gravity="center"
+                    android:hapticFeedbackEnabled="false"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <ImageView
+                        android:id="@+id/imagef22"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+
+                        app:srcCompat="@drawable/chat" />
+
+                    <TextView
+                        android:id="@+id/textView322f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="لغة عربية"
+                        android:textColor="@color/points"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+
+                android:layout_margin="12dp"
+                android:clickable="true"
+                android:elevation="6sp"
+                android:fadeScrollbars="true"
+                android:fadingEdge="horizontal"
+                android:filterTouchesWhenObscured="false"
+                android:foregroundTint="#00131212"
+                android:outlineAmbientShadowColor="#000000"
+                android:outlineSpotShadowColor="#000000"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_bg"
+
+                    android:gravity="center"
+                    android:hapticFeedbackEnabled="false"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:srcCompat="@drawable/date" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="History"
+                        android:textColor="@color/points"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carsd11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+
+                android:layout_margin="12dp"
+                android:clickable="true"
+                android:elevation="6sp"
+                android:fadeScrollbars="true"
+                android:fadingEdge="horizontal"
+                android:filterTouchesWhenObscured="false"
+                android:foregroundTint="#00131212"
+                android:outlineAmbientShadowColor="#000000"
+                android:outlineSpotShadowColor="#000000"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/card_bg"
+                    android:gravity="center"
+                    android:hapticFeedbackEnabled="false"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <ImageView
+                        android:id="@+id/geo_img"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+
+                        app:srcCompat="@drawable/bitcoin" />
+
+                    <TextView
+                        android:id="@+id/textVddiew322"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Geography"
+                        android:textColor="@color/points"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
