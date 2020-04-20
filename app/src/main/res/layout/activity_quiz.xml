@@ -4,14 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerVertical="false"
     android:background="@drawable/background"
     tools:context=".QuizActivity">
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/timer_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:gravity="right"
+            android:text="00:30"
+            android:textColor="#4DD0E1"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/score_textview"
@@ -19,7 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="15sp"
             android:text="score:0"
-            android:textColor="#4DD0E1" />
+            android:textColor="#4DD0E1"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -36,39 +50,11 @@
                 android:textColor="#5F678B"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="/X"
-                android:textColor="#515777"
-                android:textSize="14sp" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/timer_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15sp"
-            android:gravity="right"
-            android:text="00:30"
-            android:textColor="#4DD0E1"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/qst_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Question "
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
 
         <RadioGroup
             android:id="@+id/radio_group"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center|center_vertical"
             android:layout_margin="10dp"
@@ -77,6 +63,19 @@
             android:gravity="center"
             android:layoutDirection="rtl"
             android:padding="10dp">
+
+            <TextView
+                android:id="@+id/qst_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:duplicateParentState="false"
+                android:foregroundGravity="top"
+                android:gravity="center|top"
+                android:selectAllOnFocus="false"
+                android:text="Question "
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
 
             <RadioButton
                 android:id="@+id/rd1"
@@ -144,6 +143,7 @@
                 android:shadowColor="#3C3F41"
                 android:text="Next"
                 android:textColor="@android:color/white" />
+
         </RadioGroup>
 
     </LinearLayout>
