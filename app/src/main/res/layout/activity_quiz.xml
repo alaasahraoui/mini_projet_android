@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.QuizActivity">
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#4FC3F7"
+        android:src="@drawable/ic_home"
+        app:layout_anchor="@id/bottonAppbar" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottonAppbar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#4FC3F7"
+        app:fabAlignmentMode="end"
+        app:fabCradleRoundedCornerRadius="20dp"
+
+        app:menu="@menu/app_bar"
+        app:navigationIcon="@drawable/ic_menu" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

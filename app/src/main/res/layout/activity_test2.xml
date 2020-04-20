@@ -5,7 +5,125 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".QuizActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="score:0"
+            android:textColor="#4DD0E1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Question 1"
+                android:textColor="#5F678B"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="/X"
+                android:textColor="#515777"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:gravity="right"
+            android:text="00:30"
+            android:textColor="#4DD0E1"
+            android:textSize="30sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_vertical"
+            android:layout_margin="10dp"
+            android:gravity="center"
+
+
+            android:layoutDirection="rtl"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_for_field"
+                android:buttonTint="#294768"
+
+                android:foregroundTint="#294768"
+                android:outlineAmbientShadowColor="#4DD0E1"
+                android:outlineSpotShadowColor="#FF8A65"
+                android:padding="10dp"
+                android:shadowColor="#00E40F0F"
+                android:text="dsdsdsdsdsdsds"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#F06292"
+                android:textSize="18sp" />
+
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_for_field"
+                android:buttonTint="#294768"
+                android:foregroundTint="#294768"
+                android:outlineAmbientShadowColor="#4DD0E1"
+                android:outlineSpotShadowColor="#4FC3F7"
+                android:padding="10dp"
+                android:shadowColor="#4FC3F7"
+                android:text="RadioButton"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#00EB1515"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_for_field"
+                android:buttonTint="#294768"
+                android:focusable="true"
+                android:foregroundTint="#682936"
+                android:outlineAmbientShadowColor="#4DD0E1"
+                android:outlineSpotShadowColor="#4FC3F7"
+                android:padding="10dp"
+                android:shadowColor="#4FC3F7"
+                android:text="RadioButton"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#00EB1515"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
@@ -21,10 +139,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:backgroundTint="#4FC3F7"
+        android:background="#4fc3f7  "
+        app:backgroundTint="#4fc3f7  "
         app:fabAlignmentMode="end"
-        app:fabCradleRoundedCornerRadius="20dp"
 
+        app:fabCradleRoundedCornerRadius="20dp"
         app:menu="@menu/app_bar"
         app:navigationIcon="@drawable/ic_menu" />
 
