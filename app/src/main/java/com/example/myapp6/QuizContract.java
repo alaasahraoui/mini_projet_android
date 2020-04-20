@@ -1,7 +1,7 @@
 
 //for our sqllite operations , we do it only in one place
 //inner class for each table
-
+package com.example.myapp6;
 
 import android.provider.BaseColumns;
 

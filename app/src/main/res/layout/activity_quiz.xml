@@ -5,14 +5,156 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".QuizActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/score_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="score:0"
+            android:textColor="#4DD0E1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_question_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Question 1"
+                android:textColor="#5F678B"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="/X"
+                android:textColor="#515777"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timer_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:gravity="right"
+            android:text="00:30"
+            android:textColor="#4DD0E1"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/qst_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Question "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_vertical"
+            android:layout_margin="10dp"
+
+
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/rd1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_for_field"
+                android:buttonTint="#294768"
+
+                android:foregroundTint="#294768"
+                android:outlineAmbientShadowColor="#4DD0E1"
+                android:outlineSpotShadowColor="#FF8A65"
+                android:padding="10dp"
+                android:shadowColor="#00E40F0F"
+                android:text="dsdsdsdsdsdsds"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#F06292"
+                android:textSize="18sp" />
+
+
+            <RadioButton
+                android:id="@+id/rd2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_for_field"
+                android:buttonTint="#294768"
+                android:foregroundTint="#294768"
+                android:outlineAmbientShadowColor="#4DD0E1"
+                android:outlineSpotShadowColor="#4FC3F7"
+                android:padding="10dp"
+                android:shadowColor="#4FC3F7"
+                android:text="RadioButton"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#00EB1515"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rd3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_for_field"
+                android:buttonTint="#294768"
+                android:focusable="true"
+                android:foregroundTint="#682936"
+                android:outlineAmbientShadowColor="#4DD0E1"
+                android:outlineSpotShadowColor="#4FC3F7"
+                android:padding="10dp"
+                android:shadowColor="#4FC3F7"
+                android:text="RadioButton"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#00EB1515"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/next_btn_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background_signin_fourteen"
+                android:shadowColor="#3C3F41"
+                android:text="Next"
+                android:textColor="@android:color/white" />
+        </RadioGroup>
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:backgroundTint="#4FC3F7"
+        android:background="#294768"
         android:src="@drawable/ic_home"
+        app:backgroundTint="#294768"
         app:layout_anchor="@id/bottonAppbar" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -21,10 +163,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:backgroundTint="#4FC3F7"
+        app:backgroundTint="#294768"
+
         app:fabAlignmentMode="end"
         app:fabCradleRoundedCornerRadius="20dp"
-
         app:menu="@menu/app_bar"
         app:navigationIcon="@drawable/ic_menu" />
 

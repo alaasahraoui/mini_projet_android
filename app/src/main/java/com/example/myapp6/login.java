@@ -1,12 +1,11 @@
 package com.example.myapp6;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class login extends AppCompatActivity {
 
@@ -20,7 +19,7 @@ public class login extends AppCompatActivity {
         nextbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openTestingAct();
+                openQuizAct();
             }
         });
     }
@@ -44,13 +43,13 @@ public class login extends AppCompatActivity {
 
 
 
-    public void openTestingAct(){
+    public void openQuizAct(){
 //transition.setDuration(10000);
 //transition.setInterpolator(new DecelerateInterpolator());
 //getWindow().setExitTransition(transition);
         // ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle()
 
-        Intent int1 = new Intent(this,testing.class);
+        Intent int1 = new Intent(this,QuizActivity.class);
 
 
         startActivity(int1);
