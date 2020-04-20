@@ -136,6 +136,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="40dp"
                     android:background="@drawable/button_background_signin_fourteen"
+                    android:shadowColor="#3C3F41"
                     android:text="SIGN UP"
                     android:textColor="@android:color/white" />
 
