@@ -17,16 +17,6 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/timer_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15sp"
-            android:gravity="right"
-            android:text="00:30"
-            android:textColor="#4DD0E1"
-            android:textSize="30sp" />
-
-        <TextView
             android:id="@+id/score_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,6 +24,30 @@
             android:text="score:0"
             android:textColor="#4DD0E1"
             android:textSize="24sp" />
+
+        <ProgressBar
+            android:id="@+id/myprogressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="0"
+
+            android:progressDrawable="@drawable/myprogressbar"
+
+
+
+
+            />
+
+        <TextView
+            android:id="@+id/timer_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:gravity="right"
+            android:text="00:30"
+            android:textColor="#4DD0E1"
+            android:textSize="36sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -48,7 +62,8 @@
                 android:gravity="center"
                 android:text="Question 1"
                 android:textColor="#5F678B"
-                android:textSize="24sp" />
+                android:textSize="30sp" />
+
 
         </LinearLayout>
 
@@ -63,6 +78,12 @@
             android:gravity="center"
             android:layoutDirection="rtl"
             android:padding="10dp">
+
+
+
+
+
+
 
             <TextView
                 android:id="@+id/qst_textview"

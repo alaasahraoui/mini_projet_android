@@ -52,7 +52,7 @@
             >
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/carfd11"
+                android:id="@+id/carsd11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -67,7 +67,6 @@
                 android:foregroundTint="#00131212"
                 android:outlineAmbientShadowColor="#000000"
                 android:outlineSpotShadowColor="#000000"
-                app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6sp">
 
@@ -75,8 +74,8 @@
                     android:layout_width="match_parent"
 
                     android:layout_height="match_parent"
-                    android:background="@drawable/card_bg"
 
+                    android:background="@drawable/card_bg"
                     android:gravity="center"
                     android:hapticFeedbackEnabled="false"
                     android:orientation="vertical"
@@ -84,24 +83,25 @@
 
 
                     <ImageView
-                        android:id="@+id/imagfee22"
+                        android:id="@+id/geo_img"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        app:srcCompat="@drawable/animals3" />
+
+                        app:srcCompat="@drawable/bitcoin" />
 
                     <TextView
-                        android:id="@+id/textfView322"
+                        android:id="@+id/textVddiew322"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Animals"
+                        android:text="Geography"
                         android:textColor="@color/points"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardss11"
+                android:id="@+id/card1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -133,18 +133,17 @@
 
 
                     <ImageView
-                        android:id="@+id/imaggge22"
+                        android:id="@+id/image2"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-
-                        app:srcCompat="@drawable/s5" />
+                        app:srcCompat="@drawable/date" />
 
                     <TextView
-                        android:id="@+id/textViewrr322"
+                        android:id="@+id/textView32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Science"
+                        android:text="History"
                         android:textColor="@color/points"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -250,7 +249,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/card1"
+                android:id="@+id/carfd11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -282,24 +281,24 @@
 
 
                     <ImageView
-                        android:id="@+id/image2"
+                        android:id="@+id/imagfee22"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        app:srcCompat="@drawable/date" />
+                        app:srcCompat="@drawable/animals3" />
 
                     <TextView
-                        android:id="@+id/textView32"
+                        android:id="@+id/textfView322"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="History"
+                        android:text="Animals"
                         android:textColor="@color/points"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/carsd11"
+                android:id="@+id/cardss11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -314,6 +313,7 @@
                 android:foregroundTint="#00131212"
                 android:outlineAmbientShadowColor="#000000"
                 android:outlineSpotShadowColor="#000000"
+                app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6sp">
 
@@ -321,8 +321,8 @@
                     android:layout_width="match_parent"
 
                     android:layout_height="match_parent"
-
                     android:background="@drawable/card_bg"
+
                     android:gravity="center"
                     android:hapticFeedbackEnabled="false"
                     android:orientation="vertical"
@@ -330,18 +330,18 @@
 
 
                     <ImageView
-                        android:id="@+id/geo_img"
+                        android:id="@+id/imaggge22"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
 
-                        app:srcCompat="@drawable/bitcoin" />
+                        app:srcCompat="@drawable/s5" />
 
                     <TextView
-                        android:id="@+id/textVddiew322"
+                        android:id="@+id/textViewrr322"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Geography"
+                        android:text="Science"
                         android:textColor="@color/points"
                         android:textSize="18sp" />
                 </LinearLayout>
