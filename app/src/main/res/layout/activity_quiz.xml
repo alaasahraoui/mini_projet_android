@@ -17,9 +17,10 @@
             android:id="@+id/score_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15sp"
+            android:layout_marginLeft="15dp"
             android:text="score:0"
-            android:textColor="#4DD0E1" />
+            android:textColor="#4DD0E1"
+            android:textSize="30sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -31,22 +32,25 @@
                 android:id="@+id/text_view_question_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="15sp"
                 android:gravity="center"
                 android:text="Question 1"
                 android:textColor="#5F678B"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="/X"
-                android:textColor="#515777"
-                android:textSize="14sp" />
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/mProgressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:max="100"
+
+            android:progress="0"
+            android:progressDrawable="@drawable/myprogressbar" />
         <TextView
             android:id="@+id/timer_textview"
             android:layout_width="match_parent"
@@ -56,6 +60,34 @@
             android:text="00:30"
             android:textColor="#4DD0E1"
             android:textSize="30sp" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/life1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_local_hospital_black_24dp" />
+
+            <ImageView
+                android:id="@+id/life2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_local_hospital_black_24dp" />
+
+            <ImageView
+                android:id="@+id/life3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_local_hospital_black_24dp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/qst_textview"
@@ -68,13 +100,13 @@
 
         <RadioGroup
             android:id="@+id/radio_group"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center|center_vertical"
             android:layout_margin="10dp"
 
 
-            android:gravity="center"
+            android:gravity="center|top"
             android:layoutDirection="rtl"
             android:padding="10dp">
 
@@ -83,9 +115,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/bg_for_field"
-                android:buttonTint="#294768"
 
+                android:buttonTint="#294768"
                 android:foregroundTint="#294768"
                 android:outlineAmbientShadowColor="#4DD0E1"
                 android:outlineSpotShadowColor="#FF8A65"
@@ -144,6 +177,7 @@
                 android:shadowColor="#3C3F41"
                 android:text="Next"
                 android:textColor="@android:color/white" />
+
         </RadioGroup>
 
     </LinearLayout>

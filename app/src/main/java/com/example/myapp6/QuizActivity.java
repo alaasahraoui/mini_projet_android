@@ -9,14 +9,14 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-
 
 import java.util.Collections;
 import java.util.List;
@@ -48,16 +48,19 @@ public class QuizActivity extends AppCompatActivity {
     private Question currentQuestion;
 
     private int score;
+    private int lifes=3;
     private boolean answered;
 
     private long backPressedTime;
-
+ ImageView life1;
+ ImageView life2;
+ ImageView life3;
+    ProgressBar mProgressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
-        textViewQuestion = findViewById(R.id.qst_textview);
+         textViewQuestion = findViewById(R.id.qst_textview);
         textViewScore = findViewById(R.id.score_textview);
         textViewQuestionCount = findViewById(R.id.text_view_question_count);
         textViewCountDown = findViewById(R.id.timer_textview);
@@ -66,6 +69,12 @@ public class QuizActivity extends AppCompatActivity {
         rb2 = findViewById(R.id.rd2);
         rb3 = findViewById(R.id.rd3);
         buttonConfirmNext = findViewById(R.id.next_btn_quiz);
+        mProgressBar=findViewById(R.id.mProgressBar);
+
+        life1 = findViewById(R.id.life1);
+        life2 = findViewById(R.id.life2);
+        life3 = findViewById(R.id.life3);
+
 
         textColorDefaultRb = rb1.getTextColors();
         textColorDefaultCd = textViewCountDown.getTextColors();
@@ -92,6 +101,18 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    public void life_nbr(){
+        if(lifes==2){life1.setVisibility(View.GONE);}
+        if(lifes==1){life2.setVisibility(View.GONE);}
+            if(lifes==0){life3.setVisibility(View.GONE);}
+
+
+
+    }
+
+
 
     private void showNextQuestion() {
         rb1.setTextColor(textColorDefaultRb);
@@ -162,6 +183,13 @@ public class QuizActivity extends AppCompatActivity {
         if (answerNr == currentQuestion.getAnswerNr()) {
             score++;
             textViewScore.setText("Score: " + score);
+        }else{lifes--;
+
+            if(lifes==2){life1.setVisibility(View.GONE);}
+            if(lifes==1){life2.setVisibility(View.GONE);}
+            if(lifes==0){life3.setVisibility(View.GONE);}
+            if(lifes<0){Toast.makeText(this, "Game Over", Toast.LENGTH_SHORT).show(); finish();}
+
         }
 
         showSolution();
