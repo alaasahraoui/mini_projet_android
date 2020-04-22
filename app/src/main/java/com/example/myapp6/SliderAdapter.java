@@ -1,17 +1,15 @@
 package com.example.myapp6;
 
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.viewpager.widget.PagerAdapter;
-
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
 
 public class SliderAdapter extends PagerAdapter {
 
@@ -25,11 +23,11 @@ public class SliderAdapter extends PagerAdapter {
     //arrays for slider
     public int[] slide_images={R.drawable.g1,R.drawable.g2,R.drawable.g3};
     //strings
-    public String[] slide_headings={"Welcome 1 ","Welcome 2","Welcome 3 "};
+    public String[] slide_headings={"ماهي مدرستي؟ ","كيف العب ؟","تعلم معنا "};
 
-    public String[] slide_text={"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa ",
-            "aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam",
-            "dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipi  "};
+    public String[] slide_text={"مدرستي هو تطيب يسمح للاطفال بتعلم معلومات جديدة و مفيدة خلال  فترةالحجر الصحي ",
+            "اختر الموضوع الذي يعجبك واجب عن الاسئلة و التمارين المطروحة و ستضهر لك النتيجة في النهاية ",
+            "تابع التعلم يوميا و يمكنك مشاركة النتيجة مع اصدقائك ومعرفة مستواك يوميا . استمتع مع مدرستي   "};
 
 
 

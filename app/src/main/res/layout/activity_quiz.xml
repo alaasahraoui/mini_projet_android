@@ -52,17 +52,36 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/text_view_question_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Question 1"
-                android:textColor="#5F678B"
-                android:textSize="30sp" />
+            <ImageView
+                android:id="@+id/life1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_local_hospital_black_24dp" />
+
+            <ImageView
+                android:id="@+id/life2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_local_hospital_black_24dp" />
+
+            <ImageView
+                android:id="@+id/life3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_local_hospital_black_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
 
 
         </LinearLayout>
@@ -72,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center|center_vertical"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
 
 
             android:gravity="center"
@@ -80,17 +99,12 @@
             android:padding="10dp">
 
 
-
-
-
-
-
             <TextView
                 android:id="@+id/qst_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:layout_marginBottom="42dp"
+                android:layout_marginBottom="10dp"
                 android:duplicateParentState="false"
                 android:foregroundGravity="top"
                 android:gravity="center|top"
@@ -161,12 +175,27 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="40dp"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/button_background_signin_fourteen"
                 android:shadowColor="#3C3F41"
                 android:text="Next"
                 android:textColor="@android:color/white" />
 
+            <TextView
+                android:id="@+id/text_view_question_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Question 1"
+                android:textColor="#5F678B"
+                android:textSize="30sp" />
+
         </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
 
     </LinearLayout>
 
