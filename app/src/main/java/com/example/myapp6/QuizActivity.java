@@ -2,13 +2,13 @@ package com.example.myapp6;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -64,17 +64,25 @@ public class QuizActivity extends  AppCompatActivity {
     private int questionCounter;
     private int questionCountTotal;
     private Question currentQuestion;
-
+    private LinearLayout life_layout;
     private int score;
     private boolean answered;
 public int progress_status=0;
+public int erreur=0;
+
+private ImageView life1;
+private ImageView life2;
+private ImageView life3;
+
+
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        mythread();
 
 
 
@@ -84,6 +92,45 @@ public int progress_status=0;
 
 
 
+
+
+
+
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                while (progress_status < 100){
+                    progress_status+=3.33;
+                    android.os.SystemClock.sleep(1000);
+                    myhandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            myProgressBar.setProgress(( progress_status));
+                        }
+                    });
+                }
+
+
+
+
+            }
+
+
+
+
+
+
+        }).start();
+
+
+
+
+
+
+        life1=findViewById(R.id.life1);
+        life2=findViewById(R.id.life2);
+        life3=findViewById(R.id.life3);
 
         textViewQuestion = findViewById(R.id.qst_textview);
         textViewScore = findViewById(R.id.score_textview);
@@ -140,39 +187,26 @@ public int progress_status=0;
 
 
 
-private void  mythread(){    new Thread(new Runnable() {
 
-    @Override
-    public void run() {
-        while (progress_status < 100){
-            progress_status+=3.33;
-            android.os.SystemClock.sleep(1000);
-            myhandler.post(new Runnable() {
-                @Override
-                public void run() {
-                    myProgressBar.setProgress(( progress_status));
-                }
-            });
-        }
 
+
+
+
+
+
+public void lifes_nbr(){
+
+
+        erreur=questionCounter-score;
+
+         if (erreur==1){life1.setVisibility(View.GONE);}
+         if (erreur==2){life2.setVisibility(View.GONE);}
+         if (erreur==3){life3.setVisibility(View.GONE);}
+         if (erreur==4){life3.setVisibility(View.GONE); finishQuiz();}
 
 
 
     }
-
-
-
-
-
-
-}).start();}
-
-
-
-
-
-
-
 
 
 
@@ -192,13 +226,16 @@ private void  mythread(){    new Thread(new Runnable() {
             rb3.setText(currentQuestion.getOption3());
 
             questionCounter++;
-            progress_status=0;
+
             textViewQuestionCount.setText("Question: " + questionCounter + "/" + questionCountTotal);
             answered = false;
             buttonConfirmNext.setText("Confirm");
 
 
             timeLeftInMillis = COUNTDOWN_IN_MILLIS;
+
+
+
 
             startCountDown();
         } else {
@@ -217,7 +254,7 @@ private void  mythread(){    new Thread(new Runnable() {
 
 
 
-        mythread();
+
 
 
         countDownTimer = new CountDownTimer(timeLeftInMillis, 1000) {
@@ -269,7 +306,9 @@ private void  mythread(){    new Thread(new Runnable() {
         if (answerNr == currentQuestion.getAnswerNr()) {
             score++;
             textViewScore.setText("Score: " + score);
+
         }
+        lifes_nbr();
 
         showSolution();
     }
@@ -305,6 +344,9 @@ private void  mythread(){    new Thread(new Runnable() {
     }
 
     private void finishQuiz() {
+
+
+        Toast.makeText(this, "Game Over", Toast.LENGTH_SHORT).show();
         finish();
     }
 
@@ -335,38 +377,7 @@ private void  mythread(){    new Thread(new Runnable() {
 
 
 
-    public class MyAsyncTask extends AsyncTask<Void, Integer, Void> {
 
-        @Override
-        protected void onPreExecute() {
-            myProgressBar.setVisibility(View.VISIBLE);
-            myProgressBar.setProgress(0);
-            progressBar.setVisibility(View.VISIBLE);
-            progressBar.setProgress(0);
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            for(int i=0; i<100; i++){
-                publishProgress(i);
-                SystemClock.sleep(100);
-            }
-            return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            myProgressBar.setProgress(values[0]);
-            progressBar.setProgress(values[0]);
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            myProgressBar.setVisibility(View.GONE);
-            progressBar.setVisibility(View.GONE);
-
-        }
-    }
 
 
 
