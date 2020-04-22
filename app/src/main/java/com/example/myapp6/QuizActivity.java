@@ -1,15 +1,14 @@
+
 package com.example.myapp6;
 
+
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -17,32 +16,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-public class QuizActivity extends  AppCompatActivity {
-    private Handler myhandler=new Handler();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+public class QuizActivity extends AppCompatActivity {
     public static final String EXTRA_SCORE = "extraScore";
     private static final long COUNTDOWN_IN_MILLIS = 30000;
-    public ProgressBar progressBar, myProgressBar;
+
     private TextView textViewQuestion;
     private TextView textViewScore;
     private TextView textViewQuestionCount;
@@ -59,87 +42,23 @@ public class QuizActivity extends  AppCompatActivity {
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
 
-    private long backPressedTime;
     private List<Question> questionList;
     private int questionCounter;
     private int questionCountTotal;
     private Question currentQuestion;
-    private LinearLayout life_layout;
+
     private int score;
     private boolean answered;
-public int progress_status=0;
-public int erreur=0;
 
-private ImageView life1;
-private ImageView life2;
-private ImageView life3;
-
-
-
-
-
+    private long backPressedTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-
-
-
-
-
-
-
-
-
-
-
-
-        new Thread(new Runnable() {
-
-            @Override
-            public void run() {
-                while (progress_status < 100){
-                    progress_status+=3.33;
-                    android.os.SystemClock.sleep(1000);
-                    myhandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            myProgressBar.setProgress(( progress_status));
-                        }
-                    });
-                }
-
-
-
-
-            }
-
-
-
-
-
-
-        }).start();
-
-
-
-
-
-
-        life1=findViewById(R.id.life1);
-        life2=findViewById(R.id.life2);
-        life3=findViewById(R.id.life3);
-
         textViewQuestion = findViewById(R.id.qst_textview);
         textViewScore = findViewById(R.id.score_textview);
-
-
-        myProgressBar = (ProgressBar)findViewById(R.id.myprogressbar);
-
-
-
         textViewQuestionCount = findViewById(R.id.text_view_question_count);
         textViewCountDown = findViewById(R.id.timer_textview);
         rbGroup = findViewById(R.id.radio_group);
@@ -147,26 +66,16 @@ private ImageView life3;
         rb2 = findViewById(R.id.rd2);
         rb3 = findViewById(R.id.rd3);
         buttonConfirmNext = findViewById(R.id.next_btn_quiz);
+
         textColorDefaultRb = rb1.getTextColors();
         textColorDefaultCd = textViewCountDown.getTextColors();
-
-
-
-
 
         QuizDbHelper dbHelper = new QuizDbHelper(this);
         questionList = dbHelper.getAllQuestions();
         questionCountTotal = questionList.size();
         Collections.shuffle(questionList);
 
-
-
-
-
-
         showNextQuestion();
-
-
 
         buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,37 +93,10 @@ private ImageView life3;
         });
     }
 
-
-
-
-
-
-
-
-
-
-
-public void lifes_nbr(){
-
-
-        erreur=questionCounter-score;
-
-         if (erreur==1){life1.setVisibility(View.GONE);}
-         if (erreur==2){life2.setVisibility(View.GONE);}
-         if (erreur==3){life3.setVisibility(View.GONE);}
-         if (erreur==4){life3.setVisibility(View.GONE); finishQuiz();}
-
-
-
-    }
-
-
-
     private void showNextQuestion() {
         rb1.setTextColor(textColorDefaultRb);
         rb2.setTextColor(textColorDefaultRb);
         rb3.setTextColor(textColorDefaultRb);
-
         rbGroup.clearCheck();
 
         if (questionCounter < questionCountTotal) {
@@ -226,46 +108,23 @@ public void lifes_nbr(){
             rb3.setText(currentQuestion.getOption3());
 
             questionCounter++;
-
             textViewQuestionCount.setText("Question: " + questionCounter + "/" + questionCountTotal);
             answered = false;
             buttonConfirmNext.setText("Confirm");
 
-
             timeLeftInMillis = COUNTDOWN_IN_MILLIS;
-
-
-
-
             startCountDown();
         } else {
             finishQuiz();
         }
     }
 
-
-
-
     private void startCountDown() {
-
-
-
-
-
-
-
-
-
-
         countDownTimer = new CountDownTimer(timeLeftInMillis, 1000) {
-
             @Override
             public void onTick(long millisUntilFinished) {
                 timeLeftInMillis = millisUntilFinished;
-
-
                 updateCountDownText();
-
             }
 
             @Override
@@ -277,11 +136,7 @@ public void lifes_nbr(){
         }.start();
     }
 
-
-
-
     private void updateCountDownText() {
-
         int minutes = (int) (timeLeftInMillis / 1000) / 60;
         int seconds = (int) (timeLeftInMillis / 1000) % 60;
 
@@ -296,9 +151,10 @@ public void lifes_nbr(){
         }
     }
 
-
     private void checkAnswer() {
         answered = true;
+
+        countDownTimer.cancel();
 
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
         int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
@@ -306,9 +162,7 @@ public void lifes_nbr(){
         if (answerNr == currentQuestion.getAnswerNr()) {
             score++;
             textViewScore.setText("Score: " + score);
-
         }
-        lifes_nbr();
 
         showSolution();
     }
@@ -341,13 +195,11 @@ public void lifes_nbr(){
     }
 
     private void finishQuiz() {
-
-
-        Toast.makeText(this, "Game Over", Toast.LENGTH_SHORT).show();
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra(EXTRA_SCORE, score);
+        setResult(RESULT_OK, resultIntent);
         finish();
     }
-
-
 
     @Override
     public void onBackPressed() {
@@ -367,21 +219,4 @@ public void lifes_nbr(){
             countDownTimer.cancel();
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-
-
-
-
-
+}
