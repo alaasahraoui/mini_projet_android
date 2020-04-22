@@ -78,6 +78,7 @@
                     android:background="@drawable/card_bg"
                     android:gravity="center"
                     android:hapticFeedbackEnabled="false"
+                    android:onClick="start_quizAct"
                     android:orientation="vertical"
                     android:padding="16dp">
 

@@ -7,6 +7,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,7 +26,7 @@ import java.util.Locale;
 public class QuizActivity extends AppCompatActivity {
     public static final String EXTRA_SCORE = "extraScore";
     private static final long COUNTDOWN_IN_MILLIS = 30000;
-
+    CountDownTimer mCountDownTimer;
     private TextView textViewQuestion;
     private TextView textViewScore;
     private TextView textViewQuestionCount;
@@ -50,12 +51,13 @@ public class QuizActivity extends AppCompatActivity {
     private int score;
     private int lifes=3;
     private boolean answered;
-
+    int i=0;
     private long backPressedTime;
  ImageView life1;
  ImageView life2;
  ImageView life3;
-    ProgressBar mProgressBar;
+
+    ProgressBar myprogressbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +71,7 @@ public class QuizActivity extends AppCompatActivity {
         rb2 = findViewById(R.id.rd2);
         rb3 = findViewById(R.id.rd3);
         buttonConfirmNext = findViewById(R.id.next_btn_quiz);
-        mProgressBar=findViewById(R.id.mProgressBar);
+        myprogressbar=findViewById(R.id.myprogressbar);
 
         life1 = findViewById(R.id.life1);
         life2 = findViewById(R.id.life2);
@@ -85,6 +87,38 @@ public class QuizActivity extends AppCompatActivity {
         Collections.shuffle(questionList);
 
         showNextQuestion();
+
+
+
+
+        CountDownTimer mCountDownTimer;
+
+
+        myprogressbar=(ProgressBar)findViewById(R.id.myprogressbar);
+
+
+
+        myprogressbar.setProgress(i);
+        mCountDownTimer=new CountDownTimer(30000,1000) {
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Log.v("Log_tag", "Tick of Progress"+ i+ millisUntilFinished);
+                i++;
+                myprogressbar.setProgress((int)i*100/(30000/1000));
+
+            }
+
+            @Override
+            public void onFinish() {
+                //Do what you want
+                i++;
+                myprogressbar.setProgress(100);
+            }
+        };
+        mCountDownTimer.start();
+
+
 
         buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,14 +137,11 @@ public class QuizActivity extends AppCompatActivity {
     }
 
 
-    public void life_nbr(){
-        if(lifes==2){life1.setVisibility(View.GONE);}
-        if(lifes==1){life2.setVisibility(View.GONE);}
-            if(lifes==0){life3.setVisibility(View.GONE);}
 
 
 
-    }
+
+
 
 
 
@@ -129,6 +160,7 @@ public class QuizActivity extends AppCompatActivity {
             rb3.setText(currentQuestion.getOption3());
 
             questionCounter++;
+
             textViewQuestionCount.setText("Question: " + questionCounter + "/" + questionCountTotal);
             answered = false;
             buttonConfirmNext.setText("Confirm");
@@ -144,6 +176,7 @@ public class QuizActivity extends AppCompatActivity {
         countDownTimer = new CountDownTimer(timeLeftInMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+
                 timeLeftInMillis = millisUntilFinished;
                 updateCountDownText();
             }

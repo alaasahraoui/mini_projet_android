@@ -29,6 +29,11 @@ public class Activity3 extends AppCompatActivity {
 
 
     }
+
+
+    public void start_quizAct(View view){openQuizAct();}
+
+
     public void openQuizAct(){
 //transition.setDuration(10000);
 //transition.setInterpolator(new DecelerateInterpolator());
