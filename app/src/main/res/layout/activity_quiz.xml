@@ -115,6 +115,7 @@
 
             android:gravity="center|top"
             android:layoutDirection="rtl"
+            android:onClick="goHome"
             android:padding="10dp">
 
             <RadioButton

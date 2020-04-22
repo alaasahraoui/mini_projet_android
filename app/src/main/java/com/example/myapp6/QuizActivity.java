@@ -140,8 +140,7 @@ public class QuizActivity extends AppCompatActivity {
 
 
 
-
-
+public void goHome(View view){finish();}
 
 
 
@@ -221,7 +220,7 @@ public class QuizActivity extends AppCompatActivity {
             if(lifes==2){life1.setVisibility(View.GONE);}
             if(lifes==1){life2.setVisibility(View.GONE);}
             if(lifes==0){life3.setVisibility(View.GONE);}
-            if(lifes<0){Toast.makeText(this, "Game Over", Toast.LENGTH_SHORT).show(); finish();}
+            if(lifes==-1){Toast.makeText(this, "Game Over", Toast.LENGTH_SHORT).show(); finish();}
 
         }
 
